@@ -22,9 +22,6 @@ body {
   height: inherit;
 }
 
-.hidden {
-  display: none;
-}
 .btn {
   border: 0;
   background: transparent;
@@ -86,4 +83,7 @@ body {
   backdrop-filter: blur(5px);
 }
 .you {
+}
+.hidden {
+  display: none;
 }

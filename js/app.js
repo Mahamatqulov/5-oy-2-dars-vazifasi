@@ -30,7 +30,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-const numbers = prompt("Nechta rang kerak:");
+const numbers = prompt(Number("Nechta rang kerak:"));
 const list = document.querySelector("ol");
 const clearBtn = document.querySelector("#clear");
 const colors = [
@@ -71,14 +71,13 @@ for (let i = 0; i < Number(numbers); i++) {
     </li>`;
 }
 
-clearBtn.addEventListener("click", () => (list.textContent = ""));
-
 document.addEventListener("click", (e) => {
-  if (e.target.textContent == "Delete") {
-    e.target.parentElement.parentElement.remove();
-  } else if (e.target.textContent == "Apply") {
-    const color = e.target.dataset.color;
-
-    e.target.parentElement.parentElement.style.backgroundColor = color;
+  if (e.target.matches("button")) {
+    if (e.target.textContent == "Delete") {
+      e.target.closest("li").remove();
+    } else if (e.target.textContent == "Apply") {
+      const color = e.target.dataset.color;
+      e.target.closest("li").style.backgroundColor = color;
+    }
   }
 });
