@@ -30,8 +30,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-///ranglar generatsiyasi
-
 const numbers = prompt("Nechta rang kerak:");
 const list = document.querySelector("ol");
 const clearBtn = document.querySelector("#clear");
